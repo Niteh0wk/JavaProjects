@@ -6,6 +6,7 @@ public class Main {
 
         String input;
 
+        System.out.println("Type in a word/sentence in CAPS:");
         input = sc.nextLine();
 
         for (int x = 0; x < input.length(); x++) {
