@@ -11,7 +11,7 @@ public class Operatoren2 {
         System.out.println("Type in a number(hour) to know if its work/freetime:");
         input = LocalTime.parse(sc.next());
 
-        if (input.isAfter(dayStart) && input.isBefore(dayEnd)){
+        if (!input.isBefore(dayStart) && input.isBefore(dayEnd)){
             System.out.println("Work Time");
         }else {
             System.out.println("Free Time");

@@ -16,7 +16,7 @@ public class Arrays {
             }
         } while (!input.equals("q"));
 
-        int temp = 0;
+        int temp = Integer.MIN_VALUE;
         for (int x = 0; x < numbers.size(); x++){
             if (temp < numbers.get(x)){
                 temp = numbers.get(x);

@@ -19,7 +19,7 @@ public class Operatoren1 {
             evenNumber = true;
         if (input == luckyNumber)
             sameAsLuckyNumber = true;
-        if (input > 9)
+        if (input > 9 && input < 100)
             twoDigits = true;
 
         System.out.println("Round Number: " + roundNumber);
