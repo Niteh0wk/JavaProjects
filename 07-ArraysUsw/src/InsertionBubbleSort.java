@@ -7,10 +7,10 @@ public class InsertionBubbleSort {
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
 
-        int arrayLenght;
+        int arrayLength;
         System.out.println("How many numbers should be sorted?");
-        arrayLenght = sc.nextInt();
-        int[] arr = new int[arrayLenght];
+        arrayLength = sc.nextInt();
+        int[] arr = new int[arrayLength];
 
         for (int x = 0; x < arr.length; x++) {
             arr[x] = r.nextInt(101);
@@ -26,7 +26,7 @@ public class InsertionBubbleSort {
         if (bubbleOrInsertion == 1){
             insertionSort(arr);
         }else if (bubbleOrInsertion == 2){
-            bubble_sort(arr, arrayLenght);
+            bubbleSort(arr, arrayLength);
         }
 
         System.out.println("Sorted: " + Arrays.toString(arr));
@@ -45,7 +45,7 @@ public class InsertionBubbleSort {
             sorted[j + 1] = key;
         }
     }
-    static void bubble_sort( int A[ ], int n ) {
+    static void bubbleSort(int A[ ], int n ) {
         int temp;
         for(int k = 0; k< n-1; k++) {
 
