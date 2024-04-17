@@ -11,44 +11,19 @@ public class Main {
 
         for (int x = 0; x < input.length(); x++) {
             switch (input.charAt(x)) {
-                case 'A':
-                    System.out.print("@");
-                    break;
-                case 'B':
-                    System.out.print("8");
-                    break;
-                case 'C':
-                    System.out.print("(");
-                    break;
-                case 'E':
-                    System.out.print("3");
-                    break;
-                case 'G':
-                    System.out.print("6");
-                    break;
-                case 'H':
-                    System.out.print("#");
-                    break;
-                case 'I':
-                    System.out.print("!");
-                    break;
-                case 'L':
-                    System.out.print("1");
-                    break;
-                case 'O':
-                    System.out.print("0");
-                    break;
-                case 'S':
-                    System.out.print("$");
-                    break;
-                case 'T':
-                    System.out.print("7");
-                    break;
-                case 'Z':
-                    System.out.print("2");
-                    break;
-                default:
-                    System.out.print(input.charAt(x));
+                case 'A' -> System.out.print("@");
+                case 'B' -> System.out.print("8");
+                case 'C' -> System.out.print("(");
+                case 'E' -> System.out.print("3");
+                case 'G' -> System.out.print("6");
+                case 'H' -> System.out.print("#");
+                case 'I' -> System.out.print("!");
+                case 'L' -> System.out.print("1");
+                case 'O' -> System.out.print("0");
+                case 'S' -> System.out.print("$");
+                case 'T' -> System.out.print("7");
+                case 'Z' -> System.out.print("2");
+                default -> System.out.print(input.charAt(x));
             }
         }
     }
