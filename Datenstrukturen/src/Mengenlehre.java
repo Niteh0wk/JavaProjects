@@ -9,7 +9,7 @@ public class Mengenlehre {
         int[] B = {3, 5, 7};
         int[] C = {5, 7, 9};
 
-        /* Hilfe benötigt, ich weis nicht wie ich diese aufgabe angehe*/
+        /* Hilfe benötigt, ich weis nicht wie ich diese aufgabe angehen soll*/
 
 
 
