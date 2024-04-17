@@ -1,4 +1,5 @@
 import java.awt.image.ImageProducer;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -6,15 +7,21 @@ public class BingoCard {
     public static void main(String[] args) {
         Random random = new Random();
         int[][] bingoCard = new int[5][5];
+        ArrayList<Integer> checker = new ArrayList<>();
+        int min = 1;
+        int max = 16;
 
         for (int k = 0; k < bingoCard.length; k++){
-            bingoCard[k][0] = random.nextInt(1,16);
-            bingoCard[k][1] = random.nextInt(16,31);
-            bingoCard[k][2] = random.nextInt(31,46);
-            bingoCard[k][3] = random.nextInt(46,61);
-            bingoCard[k][4] = random.nextInt(61,76);
-            bingoCard[2][2] = 0;
+            for (int l = 0; l < bingoCard.length; l++){
+                do {
+                    bingoCard[l][k] = random.nextInt(min, max);
+                }while (checker.contains(bingoCard[l][k]));
+                checker.add(bingoCard[l][k]);
+            }
+            min += 15;
+            max += 15;
         }
+        bingoCard[2][2] = 0;
 
         System.out.println("[B][I][N][G][O]");
         for (int y = 0; y < bingoCard.length; y++){

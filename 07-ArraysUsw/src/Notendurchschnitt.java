@@ -5,7 +5,7 @@ public class Notendurchschnitt {
         Scanner sc = new Scanner(System.in);
         int arraySize;
         int grades;
-        int average = 0;
+        double sum = 0;
 
         System.out.println("How many grades do you want to enter?");
         arraySize = sc.nextInt();
@@ -14,9 +14,9 @@ public class Notendurchschnitt {
             System.out.println("Type in your grade(1-5):");
             grades = sc.nextInt();
             gradeArray[x] = grades;
-            average += gradeArray[x];
+            sum += gradeArray[x];
         }
-        average = average/arraySize;
+        double average = sum/arraySize;
         System.out.println("Your average is " + average);
     }
 }
