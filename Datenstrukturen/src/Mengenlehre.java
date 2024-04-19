@@ -28,7 +28,9 @@ public class Mengenlehre {
         System.out.println(intersection(B,A));
         System.out.println(intersection(C,A));
         System.out.println(intersection(C,B));
+        System.out.println("Union A ∪ B ∪ C");
         System.out.println(union(A,union(B,C)));
+        System.out.println("Beispiel A ∪ (B ∩ C)");
         System.out.println(union(A,intersection(B,C)));
     }
     public static HashSet<Integer> union(Set<Integer> A, Set<Integer> B){
