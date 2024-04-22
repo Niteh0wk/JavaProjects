@@ -1,7 +1,11 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Wörterbuch {
+    static HashMap<String, String> englishGerman = new HashMap<>();
+    static HashMap<String, String> germanEnglish = new HashMap<>();
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -13,9 +17,6 @@ public class Wörterbuch {
         String searchTranslation;
 
         boolean exit = false;
-
-        HashMap<String, String> englishGerman = new HashMap<>();
-        HashMap<String, String> germanEnglish = new HashMap<>();
 
         do {
             do {
@@ -33,14 +34,12 @@ public class Wörterbuch {
                 englishWord = sc.next();
                 System.out.println("Type in the german Translation:");
                 germanWord = sc.next();
-                englishGerman.put(englishWord, germanWord);
-                germanEnglish.put(germanWord, englishWord);
+                addTranslation(englishWord, germanWord, englishGerman, germanEnglish);
             }
             if (menuSelection == 2){
                 System.out.println("Type in the german/english word you want to delete:");
                 deleteWordPair = sc.next();
-                englishGerman.remove(deleteWordPair);
-                germanEnglish.remove(deleteWordPair);
+                deleteTranslation(deleteWordPair, englishGerman, germanEnglish);
             }
             if (menuSelection == 3){
                 System.out.println("Type in the german/english word you want to translate:");
@@ -55,6 +54,16 @@ public class Wörterbuch {
                 exit = true;
             }
         }while (!exit);
-
     }
+
+    public static void addTranslation(String englishWord, String germanWord, HashMap<String, String> englishGerman, HashMap<String, String> germanEnglish){
+        englishGerman.put(englishWord, germanWord);
+        germanEnglish.put(germanWord, englishWord);
+    }
+    
+    public static void deleteTranslation(String deleteWordPair, HashMap<String, String> englishGerman, HashMap<String, String> germanEnglish){
+        englishGerman.remove(deleteWordPair);
+        germanEnglish.remove(deleteWordPair);
+    }
+
 }
