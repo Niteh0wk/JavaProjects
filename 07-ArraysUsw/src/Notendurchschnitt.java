@@ -11,8 +11,10 @@ public class Notendurchschnitt {
         arraySize = sc.nextInt();
         int[] gradeArray = new int[arraySize];
         for (int x = 0; x < gradeArray.length; x++){
-            System.out.println("Type in your grade(1-5):");
-            grades = sc.nextInt();
+            do {
+                System.out.println("Type in your grade(1-5):");
+                grades = sc.nextInt();
+            }while (grades < 0 || grades > 5);
             gradeArray[x] = grades;
             sum += gradeArray[x];
         }
