@@ -23,13 +23,15 @@ public class Bibliothek {
         System.out.println(searchAuthor(search));
         printAuthorAndTitle();
     }
+
     public static void addAuthor(String author){
         bib.put(author, new HashSet<>());
-
     }
+
     public static void addTitle(String author, String title){
         bib.get(author).add(title);
     }
+
     public static String searchAuthor(String title){
         for (String author : bib.keySet()){
             if (bib.get(author).contains(title)){
@@ -38,6 +40,7 @@ public class Bibliothek {
         }
         return null;
     }
+
     public static void printAuthorAndTitle(){
         for (String author : bib.keySet()){
             for (String title : bib.get(author)){
