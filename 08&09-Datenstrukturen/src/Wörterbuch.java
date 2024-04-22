@@ -60,7 +60,7 @@ public class Wörterbuch {
         englishGerman.put(englishWord, germanWord);
         germanEnglish.put(germanWord, englishWord);
     }
-    
+
     public static void deleteTranslation(String deleteWordPair, HashMap<String, String> englishGerman, HashMap<String, String> germanEnglish){
         englishGerman.remove(deleteWordPair);
         germanEnglish.remove(deleteWordPair);
