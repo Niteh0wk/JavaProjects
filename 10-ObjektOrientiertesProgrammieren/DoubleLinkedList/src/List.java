@@ -9,20 +9,15 @@ public class List {
 
     void add(int index, int value){
         if (index < 0 || index > size){
-            throw new IndexOutOfBoundsException("index=" + index);
+            throw new IndexOutOfBoundsException("index = " + index);
         }
         if (index == 0){
-            head = new Node(head, value);
+            head = new Node(head,value);
         }else{
             Node n = search(index-1);
             n.next = new Node(n.next, value);
         }
         size++;
-    }
-
-    void get(int index){
-        Node n = search(index);
-        System.out.println("The value of index " + index + " = " + n.value);
     }
 
     void remove(int index){
@@ -31,12 +26,21 @@ public class List {
         size--;
     }
 
+    void get(int index){
+        Node n = search(index);
+        System.out.println("The value of index " + index + " = " + n.value);
+    }
+
     Node search(int index){
         Node n = head;
         for (int i = 0; i < index; i++) {
             n = n.next;
         }
         return n;
+    }
+
+    public int size(){
+        return size;
     }
 
     @Override
@@ -50,15 +54,12 @@ public class List {
         return s + "]";
     }
 
-    public int size(){
-        return size;
-    }
 
-    class Node {
+    class Node{
         Node next;
         int value;
 
-        public Node(Node next, int value) {
+        public Node(Node next, int value){
             this.next = next;
             this.value = value;
         }

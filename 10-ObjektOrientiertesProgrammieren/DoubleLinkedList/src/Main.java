@@ -11,16 +11,17 @@ public class Main {
 
         System.out.println(li);
 
-        li.add(3,25);
+        li.add(2, 15);
 
-        System.out.println(li + " - with add");
+        System.out.println(li);
 
-        li.remove(1);
+        li.remove(3);
 
-        System.out.println(li + " - with remove");
+        System.out.println(li);
 
         li.get(3);
 
-        System.out.println("The size is = " + li.size());
+        System.out.println("List size = " + li.size());
+
     }
 }
