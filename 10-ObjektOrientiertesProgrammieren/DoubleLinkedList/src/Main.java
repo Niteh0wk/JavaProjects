@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        DoubleLinkedList li = new DoubleLinkedList();
+        DoubleLinkedList<Integer> li = new DoubleLinkedList<>();
 
         li.add(1);
         li.add(3);
