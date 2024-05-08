@@ -1,12 +1,12 @@
 
 
-public class DoubleLinkedList {
+public class DoubleLinkedList<T> {
     private int size;
-    private Node head = null;
-    private Node tail = null;
+    private Node<T> head = null;
+    private Node<T> tail = null;
 
-    void add(int value) {
-        Node temp = new Node(value);
+    void add(T value) {
+        Node<T> temp = new Node<>(value);
 
         if (head == null) {
             head = temp;
@@ -22,27 +22,27 @@ public class DoubleLinkedList {
         size++;
     }
 
-    void add(int index, int value) {
+    void add(int index, T value) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("index=" + index);
         }
         if (index == 0) {
-            head = new Node(value);
+            head = new Node<T>(value);
         } else {
-            Node n = search(index - 1);
-            n.next = new Node(n, n.next, value);
+            Node<T> n = search(index - 1);
+            n.next = new Node<>(n, n.next, value);
             n.next.next.prev = n.next;
         }
         size++;
     }
 
     void get(int index) {
-        Node n = search(index);
+        Node<T> n = search(index);
         System.out.println("The value of index " + index + " = " + n.value);
     }
 
     void remove(int index) {
-        Node n = search(index);
+        Node<T> n = search(index);
         if (index == 0){
             head = head.next;
             head.prev = null;
@@ -62,8 +62,8 @@ public class DoubleLinkedList {
     }
 
 
-    Node search(int index) {
-        Node current;
+    Node<T> search(int index) {
+        Node<T> current;
         if (index < size / 2) {
             current = head;
             for (int i = 0; i < index; i++) {
@@ -81,7 +81,7 @@ public class DoubleLinkedList {
 
     @Override
     public String toString() {
-        Node current = head;
+        Node<T> current = head;
         if (head == null) {
             return "List is empty";
         }
@@ -94,7 +94,7 @@ public class DoubleLinkedList {
     }
 
     public String toStringReverse() {
-        Node current = tail;
+        Node<T> current = tail;
         String s = "[";
         for (int i = size; i > 0; i--) {
             s += current.value + ", ";
@@ -103,16 +103,16 @@ public class DoubleLinkedList {
         return s + "]";
     }
 
-    class Node {
-        int value;
-        Node next;
-        Node prev;
+    class Node<T> {
+        T value;
+        Node<T> next;
+        Node<T> prev;
 
-        public Node(int value) {
+        public Node(T value) {
             this.value = value;
         }
 
-        public Node(Node prev, Node next, int value) {
+        public Node(Node<T> prev, Node<T> next, T value) {
             this.prev = prev;
             this.next = next;
             this.value = value;
