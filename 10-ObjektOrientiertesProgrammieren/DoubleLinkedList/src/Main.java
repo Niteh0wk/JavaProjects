@@ -10,18 +10,20 @@ public class Main {
 
         System.out.println(li);
         System.out.println(li.toStringReverse());
+        li.size();
 
-        li.add(3, 6);
+        li.add(4, 6);
         li.add(2, 4);
 
         System.out.println(li);
-        System.out.println(li.toStringReverse());
-
         li.get(3);
+        System.out.println(li.toStringReverse());
+        li.size();
 
-        li.remove(1);
+        li.remove(3);
 
         System.out.println(li);
         System.out.println(li.toStringReverse());
+        li.size();
     }
 }

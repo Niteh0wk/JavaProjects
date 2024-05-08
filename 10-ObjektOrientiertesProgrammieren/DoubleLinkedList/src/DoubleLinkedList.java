@@ -42,9 +42,23 @@ public class DoubleLinkedList {
     }
 
     void remove(int index) {
-        Node n = search(index - 1);
-        n.next = n.next.next;
+        Node n = search(index);
+        if (index == 0){
+            head = head.next;
+            head.prev = null;
+        }else if (index == size-1){
+            tail = tail.prev;
+            tail.next = null;
+        }else {
+            n.prev.next = n.next;
+            n.next.prev = n.prev;
+        }
+
         size--;
+    }
+
+    void size(){
+        System.out.println("The size of the list is = " + size);
     }
 
 
@@ -57,7 +71,7 @@ public class DoubleLinkedList {
             }
         } else {
             current = tail;
-            for (int i = size - 1; i > index; i--) {
+            for (int i = size; i > index; i--) {
                 current = current.prev;
             }
         }
@@ -76,7 +90,7 @@ public class DoubleLinkedList {
             s += current.value + ", ";
             current = current.next;
         }
-        return s + "]" + "\n The size is = " + size;
+        return s + "]";
     }
 
     public String toStringReverse() {
@@ -86,7 +100,7 @@ public class DoubleLinkedList {
             s += current.value + ", ";
             current = current.prev;
         }
-        return s + "]" + "\n The size is = " + size;
+        return s + "]";
     }
 
     class Node {
