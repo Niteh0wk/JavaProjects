@@ -6,15 +6,26 @@ public class Person {
         male, female, diverse
     }
 
-    public Person(String firstName, String lastName, String birthday, Gender gender, int plz, String city, String street, int houseNumber){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = birthday;
+    public void fullPerson(String firstName, String lastName, String birthday, Gender gender, int plz, String city, String street, int houseNumber){
+        setFirstName(firstName);
+        setLastName(lastName);
+        setBirthday(birthday);
         Adress ad1 = new Adress();
         ad1.setPlz(plz);
         ad1.setCity(city);
         ad1.setStreet(street);
         ad1.setHouseNumber(houseNumber);
+    }
+
+    public void simplePerson(String firstName, String lastName){
+        setFirstName(firstName);
+        setLastName(lastName);
+    }
+
+    public void advancedPerson(String firstName, String lastName, String birthday, Gender gender){
+        setFirstName(firstName);
+        setLastName(lastName);
+        setBirthday(birthday);
     }
 
     public String getFirstName(){

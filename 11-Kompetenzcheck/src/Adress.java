@@ -1,8 +1,8 @@
 public class Adress {
-    int plz;
-    String city;
-    String street;
-    int houseNumber;
+    private int plz;
+    private String city;
+    private String street;
+    private int houseNumber;
 
     public int getPlz() {
         return plz;
