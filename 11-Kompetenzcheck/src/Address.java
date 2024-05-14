@@ -1,4 +1,4 @@
-public class Adress {
+public class Address {
     private int plz;
     private String city;
     private String street;

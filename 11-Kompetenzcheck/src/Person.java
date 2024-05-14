@@ -1,38 +1,51 @@
+import java.lang.annotation.Native;
+
 public class Person {
     private String firstName;
     private String lastName;
     private String birthday;
-    enum Gender{
-        male, female, diverse
-    }
+    private Address address;
+    private Gender gender;
+    private int printValidator;
+    final private int PRINT_FULL = 1;
+    final private int PRINT_ADVANCED = 2;
+    final private int PRINT_SIMPLE = 3;
 
-    public void fullPerson(String firstName, String lastName, String birthday, Gender gender, int plz, String city, String street, int houseNumber){
+    public void fullPerson(String firstName, String lastName, String birthday, Gender gender, int plz, String city, String street, int houseNumber) {
         setFirstName(firstName);
         setLastName(lastName);
         setBirthday(birthday);
-        Adress ad1 = new Adress();
-        ad1.setPlz(plz);
-        ad1.setCity(city);
-        ad1.setStreet(street);
-        ad1.setHouseNumber(houseNumber);
+        setGender(gender);
+        Address temp = new Address();
+        temp.setPlz(plz);
+        temp.setCity(city);
+        temp.setStreet(street);
+        temp.setHouseNumber(houseNumber);
+        setAddress(temp);
+        printValidator = PRINT_FULL;
     }
 
-    public void simplePerson(String firstName, String lastName){
-        setFirstName(firstName);
-        setLastName(lastName);
-    }
-
-    public void advancedPerson(String firstName, String lastName, String birthday, Gender gender){
+    public void advancedPerson(String firstName, String lastName, String birthday, Gender gender) {
         setFirstName(firstName);
         setLastName(lastName);
         setBirthday(birthday);
+        setGender(gender);
+        printValidator = PRINT_ADVANCED;
     }
 
-    public String getFirstName(){
+    public void simplePerson(String firstName, String lastName) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        printValidator = PRINT_SIMPLE;
+    }
+
+
+
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName){
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -52,4 +65,51 @@ public class Person {
         this.birthday = birthday;
     }
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender){
+        this.gender = gender;
+    }
+
+    public Address getAddress(){
+        return address;
+    }
+
+    public void setAddress(Address address){
+        this.address = address;
+    }
+
+    @Override
+    public String toString(){
+        String s;
+        if (this.printValidator == PRINT_FULL) {
+            s = (
+                    this.getFirstName() + ", " +
+                            this.getLastName() + ", " +
+                            this.getBirthday() + ", " +
+                            this.getGender() + ", " +
+                            this.getAddress().getPlz() + ", " +
+                            this.getAddress().getCity() + ", " +
+                            this.getAddress().getStreet() + " " +
+                            this.getAddress().getHouseNumber()
+            );
+        } else if (this.printValidator == PRINT_ADVANCED) {
+            s = (
+                    this.getFirstName() + ", " +
+                            this.getLastName() + ", " +
+                            this.getBirthday() + ", " +
+                            this.getGender()
+            );
+        } else if (this.printValidator == PRINT_SIMPLE){
+            s = (
+                    this.getFirstName() + ", " +
+                            this.getLastName()
+            );
+        } else {
+            s = "The person is not initialized";
+        }
+       return s;
+    }
 }

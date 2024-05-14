@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="548f354d-45c6-4d24-9e44-a05dcc230f23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LinkedList/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Queue/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Queue/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Adress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Adress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/Personenverwaltung.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11-Kompetenzcheck/src/PersonManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

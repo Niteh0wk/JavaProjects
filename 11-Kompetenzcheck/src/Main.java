@@ -1,18 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        Personenverwaltung PVLinz = new Personenverwaltung();
+        PersonManager PMLinz = new PersonManager();
 
-        PVLinz.createFullPerson("Philipp", "Gerstl", "24.02.2003", Person.Gender.male, 4131, "Kirchberg ob der Donau", "Seibersdorf", 10);
-        PVLinz.createFullPerson("Selina", "Gerstl", "02.12.2005", Person.Gender.female, 4131, "Kirchberg ob der Donau", "Seibersdorf", 10);
-        PVLinz.createSimplePerson("Geralt", "Riva");
+        PMLinz.createFullPerson("Philipp", "Gerstl", "24.02.2003", Gender.male, 4131, "Kirchberg ob der Donau", "Seibersdorf", 10);
+        PMLinz.createFullPerson("Ramona", "Gerstl", "07.12.1985", Gender.female, 4131, "Kirchberg ob der Donau", "Seibersdorf", 10);
+        PMLinz.createSimplePerson("Albert", "Rubrecht");
 
-        System.out.println(PVLinz.getPersons());
+        PMLinz.getPerson(1);
+        PMLinz.getPerson(2);
+        PMLinz.removePerson(2);
+        PMLinz.getPerson(2);
 
-        Personenverwaltung PVCodersbay = new Personenverwaltung();
+        PMLinz.personList();
 
-        PVCodersbay.createAdvancedPerson("George", "Washington", "01.01.1999", Person.Gender.male);
-        PVCodersbay.createSimplePerson("Barack", "Obama");
 
-        System.out.println(PVCodersbay.getPersons());
+        PersonManager PMWels = new PersonManager();
+
+        PMWels.createSimplePerson("Franz", "Schindl");
+
+
+
     }
 }
