@@ -62,7 +62,9 @@ public class Person {
     }
 
     public void setBirthday(String birthday) {
-        this.birthday = birthday;
+        if (birthday.matches("\\d{2}.\\d{2}.\\d{4}")){
+            this.birthday = birthday;
+        }
     }
 
     public Gender getGender() {
