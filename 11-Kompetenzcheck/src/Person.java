@@ -1,4 +1,4 @@
-import java.lang.annotation.Native;
+import java.time.format.DateTimeParseException;
 
 public class Person {
     private String firstName;
@@ -22,6 +22,7 @@ public class Person {
         temp.setStreet(street);
         temp.setHouseNumber(houseNumber);
         setAddress(temp);
+
         printValidator = PRINT_FULL;
     }
 
@@ -30,16 +31,18 @@ public class Person {
         setLastName(lastName);
         setBirthday(birthday);
         setGender(gender);
+
         printValidator = PRINT_ADVANCED;
     }
 
     public void simplePerson(String firstName, String lastName) {
         setFirstName(firstName);
         setLastName(lastName);
+
         printValidator = PRINT_SIMPLE;
     }
 
-
+    /* Getter and Setter */
 
     public String getFirstName() {
         return firstName;
@@ -61,9 +64,11 @@ public class Person {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(String birthday) throws DateTimeParseException {
         if (birthday.matches("\\d{2}.\\d{2}.\\d{4}")){
             this.birthday = birthday;
+        }else {
+            throw new DateTimeParseException("Your date does not match the right date format.", birthday, 0);
         }
     }
 
@@ -83,31 +88,30 @@ public class Person {
         this.address = address;
     }
 
+    /* toString Override for printing */
+
     @Override
     public String toString(){
         String s;
         if (this.printValidator == PRINT_FULL) {
-            s = (
-                    this.getFirstName() + ", " +
-                            this.getLastName() + ", " +
-                            this.getBirthday() + ", " +
-                            this.getGender() + ", " +
-                            this.getAddress().getPlz() + ", " +
-                            this.getAddress().getCity() + ", " +
-                            this.getAddress().getStreet() + " " +
-                            this.getAddress().getHouseNumber()
+            s = ("[" + this.getFirstName() + ", " +
+                    this.getLastName() + ", " +
+                    this.getBirthday() + ", " +
+                    this.getGender() + ", " +
+                    this.getAddress().getPlz() + ", " +
+                    this.getAddress().getCity() + ", " +
+                    this.getAddress().getStreet() + " " +
+                    this.getAddress().getHouseNumber() + "]"
             );
         } else if (this.printValidator == PRINT_ADVANCED) {
-            s = (
-                    this.getFirstName() + ", " +
-                            this.getLastName() + ", " +
-                            this.getBirthday() + ", " +
-                            this.getGender()
+            s = ("[" + this.getFirstName() + ", " +
+                    this.getLastName() + ", " +
+                    this.getBirthday() + ", " +
+                    this.getGender() + "]"
             );
         } else if (this.printValidator == PRINT_SIMPLE){
-            s = (
-                    this.getFirstName() + ", " +
-                            this.getLastName()
+            s = ("[" + this.getFirstName() + ", " +
+                    this.getLastName() + "]"
             );
         } else {
             s = "The person is not initialized";
