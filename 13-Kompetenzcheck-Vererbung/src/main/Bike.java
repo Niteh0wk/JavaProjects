@@ -2,24 +2,31 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class CargoBike extends Vehicle {
+public class Bike extends Vehicle {
     String belongsTo;
     int speedometer;
     int averageSpeed;
     int wheels;
+    int seats;
+    boolean honk;
 
     public int getAverageSpeed() {
         return averageSpeed;
     }
 
-    public CargoBike(int averageSpeed, String belongsTo) {
+    public Bike(int averageSpeed, boolean honk, String belongsTo) {
         this.averageSpeed = averageSpeed;
         this.belongsTo = belongsTo;
+        this.honk = honk;
     }
 
     @Override
     public String honk() {
-        return null;
+        if (honk){
+            return "<)) RING <)) RING";
+        }else {
+            return "No honk :(";
+        }
     }
 
     @Override
@@ -38,10 +45,11 @@ public class CargoBike extends Vehicle {
         String formattedStartTime = startTime.format(formatter);
         String formattedEndTime = endTime.format(formatter);
 
-        System.out.println("CARGOBIKE:");
+        System.out.println("BIKE:");
         System.out.println(startLocation + ": " + formattedStartTime);
         System.out.println("Duration: " + (driveDuration.toHours()) + " hours and " + (driveDuration.toMinutes() % 60) + " minutes");
         System.out.println(destination + ": " + formattedEndTime);
+        System.out.println(honk());
         System.out.println();
     }
 

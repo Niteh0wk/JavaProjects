@@ -5,14 +5,14 @@ public class Main {
     public static void main(String[] args) {
         List<Object> vehicles = new ArrayList<>();
 
-        vehicles.add(new PKW(130,true, "Audi", "Georg", 4,true, 250,5));
-        vehicles.add(new PKW(200, false, "Toyota", "Otto",4,true, 1000, 2));
-        vehicles.add(new LKW(50,"Mercedes","Johan",400));
-        vehicles.add(new LKW(40,"MAN","Rüdiger",450));
-        vehicles.add(new Bike(15,"Jürgen"));
-        vehicles.add(new Bike(10,"Ralph"));
-        vehicles.add(new CargoBike(5,"Agatha"));
-        vehicles.add(new CargoBike(7,"Selina"));
+        vehicles.add(new PKW(130,false, "Audi", "Georg", 4,true, 250,5));
+        vehicles.add(new PKW(200, true, "Toyota", "Otto",4,true, 1000, 2));
+        vehicles.add(new LKW(50, false,"Mercedes","Johan",400));
+        vehicles.add(new LKW(40, false,"MAN","Rüdiger",450));
+        vehicles.add(new Bike(15, true,"Jürgen"));
+        vehicles.add(new Bike(10, false,"Ralph"));
+        vehicles.add(new CargoBike(5,false,"Agatha"));
+        vehicles.add(new CargoBike(7,true,"Selina"));
 
         for (Object vehicle : vehicles) {
             if (vehicle instanceof PKW) {

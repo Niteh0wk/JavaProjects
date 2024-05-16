@@ -13,21 +13,28 @@ public class LKW extends Vehicle {
     int seats;
     boolean trailer;
     int cargo;
+    boolean honk;
 
     public int getAverageSpeed() {
         return averageSpeed;
     }
 
-    public LKW(int averageSpeed, String manufacturer, String belongsTo, int horsepower) {
+    public LKW(int averageSpeed, boolean honk, String manufacturer, String belongsTo, int horsepower) {
         this.averageSpeed = averageSpeed;
         this.manufacturer = manufacturer;
         this.belongsTo = belongsTo;
         this.horsepower = horsepower;
+        this.honk = honk;
     }
 
     @Override
     public String honk() {
-        return null;
+        if (honk){
+            return "<)) HONK <)) HONK";
+        }else {
+            return "No honk :(";
+        }
+
     }
 
     @Override
@@ -50,15 +57,16 @@ public class LKW extends Vehicle {
         System.out.println(startLocation + ": " + formattedStartTime);
         System.out.println("Duration: " + (driveDuration.toHours()) + " hours and " + (driveDuration.toMinutes() % 60) + " minutes");
         System.out.println(destination + ": " + formattedEndTime);
+        System.out.println(honk());
         System.out.println();
     }
 
     @Override
     public String toString() {
-        return "LKW{" +
+        return "[" +
                 "Manufacturer= " + manufacturer +
                 ", Belongs to= " + belongsTo +
                 ", Horsepower=" + horsepower +
-                '}';
+                ']';
     }
 }
