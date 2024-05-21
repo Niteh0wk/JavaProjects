@@ -37,4 +37,28 @@ class PersonManagerTest {
     @Test
     void removePerson() {
     }
+
+    @Test
+    void testCreateFullPerson() {
+    }
+
+    @Test
+    void testCreateAdvancedPerson() {
+    }
+
+    @Test
+    void testCreateSimplePerson() {
+    }
+
+    @Test
+    void findPerson() {
+    }
+
+    @Test
+    void testListPersons() {
+    }
+
+    @Test
+    void testRemovePerson() {
+    }
 }

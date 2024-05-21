@@ -69,4 +69,64 @@ class PersonTest {
     @Test
     void testToString() {
     }
+
+    @Test
+    void testFullPerson() {
+    }
+
+    @Test
+    void testAdvancedPerson() {
+    }
+
+    @Test
+    void testSimplePerson() {
+    }
+
+    @Test
+    void testGetFirstName() {
+    }
+
+    @Test
+    void testSetFirstName() {
+    }
+
+    @Test
+    void testGetLastName() {
+    }
+
+    @Test
+    void testSetLastName() {
+    }
+
+    @Test
+    void testGetBirthday() {
+    }
+
+    @Test
+    void testSetBirthday() {
+    }
+
+    @Test
+    void testGetGender() {
+    }
+
+    @Test
+    void testSetGender() {
+    }
+
+    @Test
+    void testGetAddress() {
+    }
+
+    @Test
+    void testSetAddress() {
+    }
+
+    @Test
+    void testToString1() {
+    }
+
+    @Test
+    void isNumeric() {
+    }
 }

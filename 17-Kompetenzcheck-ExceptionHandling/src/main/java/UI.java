@@ -1,3 +1,4 @@
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class UI {
@@ -10,7 +11,8 @@ public class UI {
         System.out.println("2. Create a advanced Person");
         System.out.println("3. Create a full person");
         System.out.println("4. List all Persons");
-        System.out.println("5. Remove a specific person");
+        System.out.println("5. Get specific Person");
+        System.out.println("6. Remove Person");
         System.out.println("Type X to exit");
     }
 
@@ -49,10 +51,19 @@ public class UI {
         sc.nextLine();
 
         System.out.print("City:");
-        address.setCity(sc.nextLine());
+        try {
+            address.setCity(sc.nextLine());
+        }catch (InvalidPersonName e){
+            System.out.println(e.getMessage());
+        }
 
         System.out.print("Street:");
-        address.setStreet(sc.nextLine());
+        try {
+            address.setStreet(sc.nextLine());
+        }catch (InvalidPersonName e){
+            System.out.println(e.getMessage());
+        }
+
 
         System.out.print("House Number:");
         address.setHouseNumber(sc.nextInt());
@@ -61,6 +72,7 @@ public class UI {
     }
 
     public void createAdvanced() {
+        int checker = 0;
         System.out.print("First Name:");
         firstName = sc.next();
 
@@ -99,14 +111,16 @@ public class UI {
         PMLinz.listPersons();
     }
 
-    public void getPerson(){
+    public void getPerson() {
         System.out.print("First Name:");
-        firstName = sc.next();
-
-        System.out.print("Last Name:");
         lastName = sc.next();
 
-        PMLinz.getPerson();
+        try {
+            Person p = PMLinz.findPerson(lastName);
+            System.out.println(p);
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void removePerson() {
@@ -116,7 +130,12 @@ public class UI {
         System.out.print("Last Name:");
         lastName = sc.next();
 
-        PMLinz.removePerson(firstName, lastName);
-        System.out.println("|Person Removed|");
+        try {
+            PMLinz.removePerson(firstName, lastName);
+            System.out.println("|Person Removed|");
+        }catch (NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
