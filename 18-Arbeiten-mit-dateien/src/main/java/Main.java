@@ -17,6 +17,12 @@ public class Main {
          e.getCause();
      }
 
+        try {
+            p1.createPerson("Ramona", "Gerstl","07.12.1985");
+        }catch (IOException e){
+            e.getCause();
+        }
+
      try {
          p1.readWithFiles();
      }catch (IOException e){

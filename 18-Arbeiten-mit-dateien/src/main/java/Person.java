@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 public class Person {
     public void createPerson(String firstName, String lastName, String birthday) throws IOException {
-        FileWriter writer = new FileWriter("personen.cvs");
+        FileWriter writer = new FileWriter("personen.csv");
         char[] content = (firstName + ", " + lastName + ", " + birthday).toCharArray();
         writer.write(content);
         writer.close();
     }
 
     public void readWithScanner() throws FileNotFoundException {
-        File personen = new File("personen.cvs");
+        File personen = new File("personen.csv");
         Scanner fileScanner = new Scanner(personen);
         while (fileScanner.hasNextLine()){
             System.out.println(fileScanner.nextLine());
@@ -25,7 +25,7 @@ public class Person {
     }
 
     public void readWithFiles() throws IOException {
-        List<String> content = Files.readAllLines(Paths.get("personen.cvs"));
+        List<String> content = Files.readAllLines(Paths.get("personen.csv"));
         for (String line : content){
             System.out.println(line);
         }
