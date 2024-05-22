@@ -1,14 +1,8 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Attacks atk = new Attacks();
-
-        try {
-            atk.readWithBuffered();
-        }catch (IOException e){
-            e.getCause();
-        }
 
     }
 }
