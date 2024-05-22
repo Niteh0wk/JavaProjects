@@ -1,7 +1,8 @@
-﻿1;Pound;Deals damage with no additional effect.;Normal;Physical;40;100%;35
+﻿#;Name;Effect;Type;Kind;Power;Accuracy;PP
+1;Pound;Deals damage with no additional effect.;Normal;Physical;40;100%;35
 2;Karate Chop;Has a high critical hit ratio.;Fighting;Physical;50;100%;25
-3;DoubleSlap;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;10
-4;Comet Punch;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;18;85%;15
+3;DoubleSlap;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;10
+4;Comet Punch;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;18;85%;15
 5;Mega Punch;Deals damage with no additional effect.;Normal;Physical;80;85%;20
 6;Pay Day;The player picks up extra money after in-game battles. the money received is equal to: [user's level * 5 * number of times Pay Day is used]. The player does not lose money if the opponent uses Pay Day but the player wins the battle.;Normal;Physical;40;100%;20
 7;Fire Punch;Has a 10% chance to burn the target.;Fire;Physical;75;100%;15
@@ -25,7 +26,7 @@
 25;Rolling Kick;Has a 30% chance to make the target flinch.;Fighting;Physical;60;85%;15
 26;Headbutt;Has a 30% chance to make the target flinch.;Normal;Physical;70;100%;15
 27;Horn Attack;Deals damage with no additional effect.;Normal;Physical;65;100%;25
-28;Fury Attack;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;20
+28;Fury Attack;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;20
 29;Horn Drill;The target faints. doesn't work on higher-leveled Pokemon.;Normal;Physical;0;30%;5
 30;Tackle;Deals damage with no additional effect.;Normal;Physical;50;100%;35
 31;Body Slam;Has a 30% chance to paralyze the target.;Normal;Physical;85;100%;15
@@ -35,7 +36,7 @@
 35;Double-Edge;The user receives 1/3 recoil damage.;Normal;Physical;120;100%;15
 36;Poison Sting;Has a 30% chance to poison the target.;Poison;Physical;15;100%;35
 37;Twineedle;Strikes twice. if the first hit breaks the target's Substitute the real Pokemon will take damage from the second hit. Has a 20% chance to poison the target .;Bug;Physical;25;100%;20
-38;Pin Missile;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Bug;Physical;14;85%;20
+38;Pin Missile;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Bug;Physical;14;85%;20
 39;Bite;Has a 30% chance to make the target flinch.;Dark;Physical;60;100%;25
 40;SonicBoom;Always deals 20 points of damage.;Normal;Special;20;90%;20
 41;Acid;Has a 10% chance to lower the target's Special Defense by 1 stage.;Poison;Special;40;100%;30
@@ -88,11 +89,11 @@
 88;Clamp;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn.;Water;Physical;35;85%;10
 89;Swift;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Fairy;Special;60;101%;20
 90;Skull Bash;The user prepares on turn one raising its Defense by 1 stage and becoming uncontrollable and then attacks on turn two.;Normal;Physical;100;100%;15
-91;Spike Cannon;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;20;100%;15
+91;Spike Cannon;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;20;100%;15
 92;Constrict;Has a 10% chance to lower the target's Speed by 1 stage.;Normal;Physical;10;100%;35
 93;Hi Jump Kick;If this attack misses the target the user half of its max health in recoil damage.;Fighting;Physical;130;90%;10
 94;Dream Eater;Restores the user's HP by 1/2 of the damage inflicted on the target but only works on a sleeping target.;Psychic;Special;100;100%;15
-95;Barrage;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;20
+95;Barrage;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;20
 96;Leech Life;Restores the user's HP by 1/2 of the damage inflicted on the target.;Bug;Physical;20;100%;15
 97;Sky Attack;The user prepares on turn one becoming uncontrollable and then attacks on turn two. Also has a 30% chance to make the target flinch.;Flying;Physical;140;90%;5
 98;Bubble;Has a 10% chance to lower the target's Speed by 1 stage.;Water;Special;20;100%;30
@@ -100,7 +101,7 @@
 100;Psywave;Randomly inflicts set damage equal to .5x .6x .7x .8x .9x 1.0x 1.1x 1.2x 1.3x 1.4x or 1.5x the user's level.;Psychic;Special;50;80%;15
 101;Crabhammer;Has a high critical hit ratio.;Water;Physical;90;90%;10
 102;Explosion;Causes the user to faint.;Normal;Physical;250;100%;5
-103;Fury Swipes;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;18;80%;15
+103;Fury Swipes;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;18;80%;15
 104;Bonemerang;Strikes twice. if the first hit breaks the target's Substitute the real Pokemon will take damage from the second hit.;Ground;Physical;50;90%;10
 105;Rock Slide;Has a 30% chance to make the target flinch.;Rock;Physical;75;90%;10
 106;Hyper Fang;Has a 10% chance to make the target flinch.;Normal;Physical;80;90%;15
@@ -108,7 +109,7 @@
 108;Super Fang;This move halves the target's current HP.;Normal;Physical;50;90%;10
 109;Slash;Has a high critical hit ratio.;Normal;Physical;70;100%;20
 110;Struggle;Used automatically when all of the user's other moves have run out of PP or are otherwise inaccessible. The user receives recoil damage equal to 1/4 of its max HP. Struggle is classified as a typeless move and will hit any Pokemon for normal damage.;Typeless;Physical;50;100%;1
-111;Triple Kick;Attacks three times in one turn adding 10 BP for each kick. If a kick misses the move ends instantly. if one of the kicks breaks a target's Substitute the real Pokemon will take damage for the remaining kicks.;Fighting;Physical;10;90%;10
+111;Triple Kick;AttacksReader three times in one turn adding 10 BP for each kick. If a kick misses the move ends instantly. if one of the kicks breaks a target's Substitute the real Pokemon will take damage for the remaining kicks.;Fighting;Physical;10;90%;10
 112;Thief;Steals the target's held item unless the user is already holding an item or the target has Sticky Hold or Multitype. A stolen item cannot be recovered by using Recycle.;Dark;Physical;40;100%;10
 113;Flame Wheel;Has a 10% chance to burn the target. can be used while frozen which both attacks the target normally and thaws the user.;Fire;Physical;60;100%;25
 114;Snore;Has a 30% chance to make the target flinch. fails if user is awake.;Normal;Special;40;100%;15
@@ -123,7 +124,7 @@
 123;Octazooka;Has a 50% chance to lower the target's Accuracy by 1 stage.;Water;Special;65;85%;10
 124;Zap Cannon;Paralyzes the target.;Electric;Special;120;50%;5
 125;Icy Wind;Lowers the target's Speed by 1 stage.;Ice;Special;55;95%;15
-126;Bone Rush;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Ground;Physical;25;80%;10
+126;Bone Rush;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Ground;Physical;25;80%;10
 127;Outrage;The user attacks uncontrollably for 2-3 turns and then gets confused.;Dragon;Physical;120;100%;15
 128;Giga Drain;Restores the user's HP by 1/2 of the damage inflicted on the target.;Grass;Special;75;100%;10
 129;Rollout;The user attacks uncontrollably for five turns. this move's power doubles after each turn and also if Defense Curl was used beforehand. Its power resets after five turns have ended or if the attack misses.;Rock;Physical;30;90%;20
@@ -172,7 +173,7 @@
 172;Eruption;Base power decreases as the user's HP decreases.;Fire;Special;50;100%;5
 173;Secret Power;This move has a 30% chance to inflict a side effect depending on the battle's current terrain. The target may be put to sleep in any type of grass (or in puddles) its Attack may be lowered by 1 stage while surfing on any body of water its Speed may be lowered by 1 stage while on marshy terrain its Accuracy may be lowered by 1 stage on beach sand desert sand and dirt paths (and also in Wifi battles) it may flinch in caves or on rocky outdoor terrain it may become frozen on snowy terrain and it may become paralyzed everywhere else.;Normal;Physical;70;100%;20
 174;Dive;On the first turn the user dives underwater becoming uncontrollable and evades all attacks except for Surf and Whirlpool which have doubled power. the user may also be hit underwater if it was previously targeted by Lock-On or Mind Reader or if it is attacked by a Pokemon with No Guard. On the second turn the user attacks.;Water;Physical;80;100%;10
-175;Arm Thrust;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Fighting;Physical;15;100%;20
+175;Arm Thrust;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Fighting;Physical;15;100%;20
 176;Luster Purge;Has a 50% chance to lower the target's Special Defense by 1 stage.;Psychic;Special;70;100%;5
 177;Mist Ball;Has a 50% chance to lower the target's Special Attack by 1 stage.;Psychic;Special;70;100%;5
 178;Blaze Kick;Has a high critical hit ratio and a 10% chance to burn the target.;Fire;Physical;85;90%;10
@@ -198,9 +199,9 @@
 198;Sand Tomb;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn.;Ground;Physical;35;85%;15
 199;Sheer Cold;The target faints. doesn't work on higher-leveled Pokemon.;Ice;Special;0;30%;5
 200;Muddy Water;Lowers the target's Accuracy by 1 stage.;Water;Special;95;85%;10
-201;Bullet Seed;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Grass;Physical;25;100%;30
+201;Bullet Seed;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Grass;Physical;25;100%;30
 202;Aerial Ace;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Flying;Physical;60;101%;20
-203;Icicle Spear;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Ice;Physical;25;100%;30
+203;Icicle Spear;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Ice;Physical;25;100%;30
 204;Dragon Claw;Deals damage with no additional effect.;Dragon;Physical;80;100%;15
 205;Frenzy Plant;The user recharges during its next turn. as a result until the end of the next turn the user becomes uncontrollable.;Grass;Special;150;90%;5
 206;Bounce;On the first turn the user bounces into the air becoming uncontrollable and evades most attacks. Gust Twister Thunder and Sky Uppercut have normal accuracy against a mid-air Pokemon with Gust and Twister also gaining doubled power. The user may also be hit in mid-air if it was previously targeted by Lock-On or Mind Reader or if it is attacked by a Pokemon with No Guard. On the second turn the user descends and has a 30% chance to paralyze the target.;Flying;Physical;85;85%;5
@@ -210,7 +211,7 @@
 210;Volt Tackle;The user receives 1/3 recoil damage. has a 10% chance to paralyze the target.;Electric;Physical;120;100%;15
 211;Magical Leaf;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Grass;Special;60;101%;20
 212;Leaf Blade;Has a high critical hit ratio.;Grass;Physical;90;100%;15
-213;Rock Blast;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Rock;Physical;25;90%;10
+213;Rock Blast;AttacksReader 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Rock;Physical;25;90%;10
 214;Shock Wave;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Electric;Special;60;101%;20
 215;Water Pulse;Has a 20% chance to confuse the target.;Water;Special;60;100%;20
 216;Doom Desire;This move even if the user and/or the target switch out will strike the active target at the end of the second turn after its use.  Only one instance of Doom Desire or Future Sight may be active at a time.;Steel;Special;140;100%;5

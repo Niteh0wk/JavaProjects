@@ -4,7 +4,7 @@ public class UI {
     Scanner sc = new Scanner(System.in);
     int index;
     String name;
-    Mechanics mechanics = new Mechanics();
+    Game game = new Game();
 
     public void menu(){
         System.out.println("How would you like to choose your Pokemon?");
