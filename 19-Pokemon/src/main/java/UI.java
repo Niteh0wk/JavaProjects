@@ -1,16 +1,10 @@
-import java.util.Scanner;
-
 public class UI {
-    Scanner sc = new Scanner(System.in);
-    int index;
-    String name;
-    Game game = new Game();
+    public static void main(String[] args) {
 
-    public void menu() {
         System.out.println("How would you like to choose your Pokemon?");
         System.out.println("1. Id");
         System.out.println("2. Name");
+
+
     }
-
-
 }

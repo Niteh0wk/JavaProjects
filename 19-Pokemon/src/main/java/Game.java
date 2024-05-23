@@ -2,13 +2,12 @@ import java.io.IOException;
 import java.util.Random;
 
 public class Game {
-    private Pokemon player, pc;
+    private Pokemon player;
+    private Pokemon computer;
     PokemonReader pokemonReader;
     AttacksReader attacksReader;
-    Attack playerAtk1;
-    Attack playerAtk2;
-    Attack computerAtk1;
-    Attack computerAtk2;
+    Random r = new Random();
+
 
     public Game() {
         pokemonReader = new PokemonReader();
@@ -20,29 +19,20 @@ public class Game {
         attacksReader.createAttacksFromCSV();
     }
 
-    public Pokemon choosePokemonWithName(String name) {
-        return pokemonReader.getPokemonWithName(name);
+    public void choosePokemonWithName(String name) {
+        player = pokemonReader.getPokemonWithName(name);
+        computer = pokemonReader.getPokemonWithId(r.nextInt(151));
     }
 
-    public Pokemon choosePokemonWithId(int id) {
-        return pokemonReader.getPokemonWithId(id);
-    }
-
-    public void playerSetAttack() {
-        Random r = new Random();
-        playerAtk1 = attacksReader.getAttack(r.nextInt(217));
-        playerAtk2 = attacksReader.getAttack(r.nextInt(217));
-    }
-
-    public void computerSetAttack() {
-        Random r = new Random();
-        int id = r.nextInt(217);
-        computerAtk1 = attacksReader.getAttack(id);
-        id = r.nextInt(217);
-        computerAtk2 = attacksReader.getAttack(id);
+    public void choosePokemonWithId(int id) {
+        player = pokemonReader.getPokemonWithId(id);
+        computer = pokemonReader.getPokemonWithId(r.nextInt(151));
     }
 
     public void startBattle() {
-        //TODO
+
     }
 }
+
+
+/* 151 Pokemon, 217 Attacks */

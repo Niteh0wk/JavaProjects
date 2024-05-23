@@ -67,4 +67,9 @@ public class Pokemon {
     public String toString() {
         return  id + ": " + name;
     }
+
+    @Override
+    public Pokemon clone(){
+        return new Pokemon(this.id, this.name, this.healthPoints, this.atk, this.def, this.speed);
+    }
 }
