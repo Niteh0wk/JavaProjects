@@ -37,9 +37,16 @@ public class PokemonReader {
         }
     }
 
-    public void printAllPokemons() {
-        for(Pokemon pokemon : pokemons.values()) {
-            System.out.println(pokemon);
+    public Pokemon getPokemonWithName(String name){
+        for (Pokemon pokemon : pokemons.values()){
+            if (pokemon.getName().equalsIgnoreCase(name)){
+                return pokemon;
+            }
         }
+        return null;
+    }
+
+    public Pokemon getPokemonWithId(int id){
+        return pokemons.get(id);
     }
 }

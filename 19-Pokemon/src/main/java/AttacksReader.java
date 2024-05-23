@@ -39,9 +39,7 @@ public class AttacksReader {
         }
     }
 
-    public void printAllAttacks() {
-        for (Attack attack : attacks.values()){
-            System.out.println(attack);
-        }
+    public Attack getAttack(int random){
+        return attacks.get(random);
     }
 }

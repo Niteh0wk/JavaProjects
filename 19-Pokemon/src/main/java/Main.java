@@ -2,11 +2,16 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        Game game = new Game();
+    public static void main(String[] args) {
+        UI ui = new UI();
 
-        game.setUp(); // initialize Pokedex
-        game.choosePokemon(); // choosePokemon
-        game.startBattle(); // fight
+        Scanner sc = new Scanner(System.in);
+        char menuChooser = '#';
+
+        ui.menu();
+
+        /*switch (menuChooser){
+
+        }*/
     }
 }
