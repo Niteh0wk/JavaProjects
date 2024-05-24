@@ -39,4 +39,6 @@ public class AttacksReader {
     public Attack getAttack(int random){
         return attacks.get(random);
     }
+
+
 }

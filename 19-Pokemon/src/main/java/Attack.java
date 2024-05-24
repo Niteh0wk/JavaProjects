@@ -2,7 +2,7 @@ public class Attack {
     private int id;
     private String name;
     private String effect;
-    private int Power;
+    private int power;
 
     public int getId() {
         return id;
@@ -29,23 +29,23 @@ public class Attack {
     }
 
     public int getPower() {
-        return Power;
+        return power;
     }
 
     public void setPower(int power) {
-        Power = power;
+        this.power = power;
     }
 
     public Attack(int id, String name, String effect, int power) {
         this.id = id;
         this.name = name;
         this.effect = effect;
-        Power = power;
+        this.power = power;
     }
 
     @Override
     public String toString() {
-        return id + ": " + name +
-                " | " + effect;
+        return "Name: " + name +
+                "| Power: " + power;
     }
 }

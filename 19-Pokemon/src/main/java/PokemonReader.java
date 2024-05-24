@@ -23,7 +23,7 @@ public class PokemonReader {
                 String[] args = currentLine.split(";");
                 int id = Integer.parseInt(args[0]);
                 String name = args[1];
-                int healthPoints = Integer.parseInt(args[5]);
+                double healthPoints = Integer.parseInt(args[5]);
                 int atk = Integer.parseInt(args[6]);
                 int def = Integer.parseInt(args[7]);
                 int speed = Integer.parseInt(args[10]);

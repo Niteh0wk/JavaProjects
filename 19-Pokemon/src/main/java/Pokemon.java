@@ -1,10 +1,12 @@
 public class Pokemon {
     private int id;
     private String name;
-    private int healthPoints;
+    private double healthPoints;
     private int atk;
     private int def;
     private int speed;
+    private Attack attack1;
+    private Attack attack2;
 
     public int getId() {
         return id;
@@ -22,11 +24,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    public int getHealthPoints() {
+    public double getHealthPoints() {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
+    public void setHealthPoints(double healthPoints) {
         this.healthPoints = healthPoints;
     }
 
@@ -54,7 +56,23 @@ public class Pokemon {
         this.speed = speed;
     }
 
-    public Pokemon(int id, String name, int healthPoints, int atk, int def, int speed) {
+    public Attack getAttack1() {
+        return attack1;
+    }
+
+    public void setAttack1(Attack attack1) {
+        this.attack1 = attack1;
+    }
+
+    public Attack getAttack2() {
+        return attack2;
+    }
+
+    public void setAttack2(Attack attack2) {
+        this.attack2 = attack2;
+    }
+
+    public Pokemon(int id, String name, double healthPoints, int atk, int def, int speed) {
         this.id = id;
         this.name = name;
         this.healthPoints = healthPoints;
@@ -65,7 +83,12 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return  id + ": " + name;
+        return "Index: " + id +
+                "| Name: " + name +
+                "| HP: " + healthPoints +
+                "| Atk: " + atk +
+                "| Def: " + def +
+                "| Speed: " + speed;
     }
 
     @Override
