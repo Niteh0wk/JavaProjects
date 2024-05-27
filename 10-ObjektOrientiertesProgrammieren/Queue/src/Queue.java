@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Queue {
-    ArrayList<Integer> queue = new ArrayList<>();
+    DoubleLinkedList<Integer> queue = new DoubleLinkedList<>();
 
 
     void enqueue(int newElement){
@@ -11,24 +11,22 @@ public class Queue {
     public int size(){
         return queue.size();
     }
-    public int dequeue(){
-        queue.removeFirst();
-        System.out.println("[" + queue.getFirst() + "]" + " Deleted");
-        return queue.getFirst();
+
+    public void dequeue(){
+        System.out.println("[" + queue.get(0) + "]" + " Deleted");
+        queue.remove(0);
     }
 
-    public int[] dequeue(int n){
-        int[] temp = new int[n];
-        for (int i = 0; i < n; i++) {
-            temp[i] = queue.removeFirst();
-            System.out.println("[" + temp[i] + "] deleted");
+    public void dequeue(int howMany){
+        for (int i = 0; i < howMany; i++) {
+            System.out.println(queue.get(0));
+            queue.remove(0);
         }
-        return temp;
     }
 
     public void print(){
-        for(int i: queue){
-            System.out.println("[" + i + "]");
+        for (int i = 0; i < queue.size(); i++) {
+            System.out.println(queue.toString());
         }
     }
 }

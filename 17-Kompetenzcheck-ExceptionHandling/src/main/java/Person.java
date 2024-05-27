@@ -40,13 +40,13 @@ public class Person {
 
         try {
             temp.setCity(city);
-        }catch (InvalidPersonName e){
+        }catch (InvalidName e){
             System.out.println(e.getMessage());
         }
 
         try {
             temp.setStreet(street);
-        }catch (InvalidPersonName e){
+        }catch (InvalidName e){
             System.out.println(e.getMessage());
         }
 

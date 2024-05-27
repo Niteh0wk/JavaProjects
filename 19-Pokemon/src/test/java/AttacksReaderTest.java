@@ -11,7 +11,7 @@ class AttacksReaderTest {
     }
 
     @org.junit.jupiter.api.Test
-    void createAttacksFromCSV() {
+    void createAttackFromCSV() {
     }
 
     @org.junit.jupiter.api.Test

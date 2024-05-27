@@ -1,44 +1,42 @@
 package main;
 
-import java.util.ArrayList;
-
 public class Stack {
-    ArrayList<Integer> stack = new ArrayList<>();
+    DoubleLinkedList<Integer> stack = new DoubleLinkedList<>();
 
-
-    void push(int newElement){
+    void push(int newElement) {
         stack.add(newElement);
     }
 
-    public int size(){
+    public int size() {
         return stack.size();
     }
-    public int pop(){
-        if (stack.isEmpty()){
+
+    public int pop() {
+        if (stack.size() == 0) {
             throw new IndexOutOfBoundsException("Stack is empty");
         }
-        int temp = stack.getLast();
-        stack.removeLast();
-        return temp;
-    }
-    public int peek(){
-        if (stack.isEmpty()){
-            throw new IndexOutOfBoundsException("Stack is empty");
-        }
-        return stack.getLast();
-    }
-    public int[] pop(int n){
-        int[] temp = new int[n];
-        for (int i = 0; i < n; i++) {
-            temp[i] = stack.removeLast();
-            System.out.println("[" + temp[i] + "]");
-        }
+        int temp = stack.get(stack.size());
+        stack.remove(stack.size());
         return temp;
     }
 
-    public void print(){
-        for(int i:stack){
-            System.out.println("[" + i + "]");
+    public int peek() {
+        if (stack.size() == 0) {
+            throw new IndexOutOfBoundsException("Stack is empty");
+        }
+        return stack.get(stack.size() + 1);
+    }
+
+    public void pop(int howMany) {
+        for (int i = 0; i < howMany; i++) {
+            System.out.println(stack.get(stack.size()));
+            stack.remove(stack.size());
+        }
+    }
+
+    public void print() {
+        for (int i = 0; i < stack.size(); i++) {
+            System.out.println(stack.toString());
         }
     }
 }

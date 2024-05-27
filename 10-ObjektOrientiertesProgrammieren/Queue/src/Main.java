@@ -6,6 +6,9 @@ public class Main {
         queue.enqueue(3);
         queue.enqueue(5);
         queue.enqueue(7);
+        queue.enqueue(9);
+        queue.enqueue(11);
+        queue.enqueue(13);
 
         queue.print();
 

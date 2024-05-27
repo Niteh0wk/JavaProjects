@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f190f974-0880-4a37-babe-c2005e09fc09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/main/java/AttacksReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/main/java/AttacksReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/main/java/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/main/java/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/main/java/PokemonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/main/java/PokemonReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/main/java/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/main/java/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/test/java/AttacksReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/test/java/AttacksReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-Pokemon/src/test/java/PokemonReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19-Pokemon/src/test/java/PokemonReaderTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Niteh0wk"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Niteh0wk/Projects.git",
+    "accountId": "909a7dab-50df-4c52-8f36-9de72a5e3cfb"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2h2dO6lCLfSs7eOXbFf7q5G7VWo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f190f974-0880-4a37-babe-c2005e09fc09" name="Changes" comment="" />
+      <created>1716796070397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716796070397</updated>
+    </task>
+    <servers />
+  </component>
+</project>

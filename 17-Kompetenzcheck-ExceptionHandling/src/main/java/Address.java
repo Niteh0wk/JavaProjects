@@ -19,11 +19,11 @@ public class Address {
         return city;
     }
 
-    public void setCity(String city) throws InvalidPersonName {
+    public void setCity(String city) throws InvalidName {
         if (!isNumeric(street)){
             this.city = city;
         }else {
-            throw new InvalidPersonName("Invalid Input: " + city);
+            throw new InvalidName("Invalid Input: " + city);
         }
     }
 
@@ -31,11 +31,11 @@ public class Address {
         return street;
     }
 
-    public void setStreet(String street) throws InvalidPersonName {
+    public void setStreet(String street) throws InvalidName {
         if (!isNumeric(street)){
             this.street = street;
         }else {
-            throw new InvalidPersonName("Invalid Input: " + street);
+            throw new InvalidName("Invalid Input: " + street);
         }
 
     }

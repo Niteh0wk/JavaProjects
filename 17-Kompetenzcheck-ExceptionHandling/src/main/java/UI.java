@@ -53,14 +53,14 @@ public class UI {
         System.out.print("City:");
         try {
             address.setCity(sc.nextLine());
-        }catch (InvalidPersonName e){
+        } catch (InvalidName e) {
             System.out.println(e.getMessage());
         }
 
         System.out.print("Street:");
         try {
             address.setStreet(sc.nextLine());
-        }catch (InvalidPersonName e){
+        } catch (InvalidName e) {
             System.out.println(e.getMessage());
         }
 
@@ -115,12 +115,9 @@ public class UI {
         System.out.print("First Name:");
         lastName = sc.next();
 
-        try {
-            Person p = PMLinz.findPerson(lastName);
-            System.out.println(p);
-        } catch (NullPointerException e) {
-            System.out.println(e.getMessage());
-        }
+        Person p = PMLinz.findPerson(lastName);
+        System.out.println(p);
+
     }
 
     public void removePerson() {
@@ -130,12 +127,7 @@ public class UI {
         System.out.print("Last Name:");
         lastName = sc.next();
 
-        try {
-            PMLinz.removePerson(firstName, lastName);
-            System.out.println("|Person Removed|");
-        }catch (NullPointerException e){
-            System.out.println(e.getMessage());
-        }
-
+        PMLinz.removePerson(firstName, lastName);
+        System.out.println("|Person Removed|");
     }
 }

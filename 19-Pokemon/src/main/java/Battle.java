@@ -9,7 +9,11 @@ public class Battle {
         healthPoints -= damage;
         formattedDamage = decimalFormat.format(damage);
         System.out.println("You used " + attackName + " and hit " + name + " for " + formattedDamage);
-        System.out.println(name + " is now at " + decimalFormat.format(healthPoints) + "HP");
+        if (healthPoints > 0.00){
+            System.out.println(name + " is now at " + decimalFormat.format(healthPoints) + "HP");
+        }else {
+            System.out.println("You won.");
+        }
         return healthPoints;
     }
 
@@ -19,7 +23,13 @@ public class Battle {
         healthPoints -= damage;
         formattedDamage = decimalFormat.format(damage);
         System.out.println(name + " used " + attackName + " and hit you for " + formattedDamage);
-        System.out.println("You are now at " + decimalFormat.format(healthPoints) + "HP");
+        if (healthPoints > 0.00){
+            System.out.println("You are now at " + decimalFormat.format(healthPoints) + "HP");
+        }else {
+            System.out.println(name + " won.");
+        }
         return healthPoints;
     }
+
+
 }

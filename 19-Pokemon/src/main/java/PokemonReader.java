@@ -12,9 +12,9 @@ public class PokemonReader {
         pokemons = new HashMap<>();
     }
 
-    public void createPokemonsFromCSV() throws IOException {
+    public void createPokemonFromCSV() {
         BufferedReader reader;
-        String currentLine = "";
+        String currentLine;
         try {
             reader = new BufferedReader(new FileReader(filePath));
             reader.readLine(); //skip first line
@@ -33,7 +33,7 @@ public class PokemonReader {
                 currentLine = reader.readLine();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getCause();
         }
     }
 

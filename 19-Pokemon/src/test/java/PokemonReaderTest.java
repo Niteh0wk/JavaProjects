@@ -11,7 +11,7 @@ class PokemonReaderTest {
     }
 
     @org.junit.jupiter.api.Test
-    void createPokemonsFromCSV() {
+    void createPokemonFromCSV() {
     }
 
     @org.junit.jupiter.api.Test

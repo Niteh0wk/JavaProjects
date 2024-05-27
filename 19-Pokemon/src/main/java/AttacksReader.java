@@ -12,10 +12,9 @@ public class AttacksReader {
         attacks = new HashMap<>();
     }
 
-
-    public void createAttacksFromCSV() throws IOException {
+    public void createAttackFromCSV() {
         BufferedReader reader;
-        String currentLine = "";
+        String currentLine;
         try {
             reader = new BufferedReader(new FileReader(filePath));
             reader.readLine(); // skip first line
@@ -32,7 +31,7 @@ public class AttacksReader {
                 currentLine = reader.readLine();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getCause();
         }
     }
 
