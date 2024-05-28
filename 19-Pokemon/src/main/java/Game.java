@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
+/* 151 Pokemons, 217 Attacks */
 
 public class Game {
     private Pokemon player;
@@ -48,20 +49,25 @@ public class Game {
             }else if ((computer.getSpeed() > player.getSpeed()) && (player.getHealthPoints() > 0.00 && computer.getHealthPoints() > 0.00)){
                 computer();
                 player(sc);
+            } else if((computer.getSpeed() == player.getSpeed()) && (player.getHealthPoints() > 0.00 && computer.getHealthPoints() > 0.00)){
+                player(sc);
+                computer();
             }
-        }while (player.getHealthPoints() > 0 && computer.getHealthPoints() > 0);
+        }while (player.getHealthPoints() > 0.00 && computer.getHealthPoints() > 0.00);
     }
 
     private void player(Scanner sc){
         int chosenAttack;
-        System.out.println("Choose your Attack:");
-        System.out.println("1. " + player.getAttack1());
-        System.out.println("2. " + player.getAttack2());
-        chosenAttack = sc.nextInt();
-        if (chosenAttack == 1){
-            computer.setHealthPoints(battle.playerAttack(player.getAttack1().getPower(), player.getAtk(), player.getDef(), player.getAttack1().getName(), computer.getName(), computer.getHealthPoints()));
-        }else if (chosenAttack == 2){
-            computer.setHealthPoints(battle.playerAttack(player.getAttack2().getPower(), player.getAtk(), player.getDef(), player.getAttack1().getName(), computer.getName(), computer.getHealthPoints()));
+        if (player.getHealthPoints() > 0.00){
+            System.out.println("Choose your Attack:");
+            System.out.println("1. " + player.getAttack1());
+            System.out.println("2. " + player.getAttack2());
+            chosenAttack = sc.nextInt();
+            if (chosenAttack == 1){
+                computer.setHealthPoints(battle.playerAttack(player.getAttack1().getPower(), player.getAtk(), player.getDef(), player.getAttack1().getName(), computer.getName(), computer.getHealthPoints()));
+            }else if (chosenAttack == 2){
+                computer.setHealthPoints(battle.playerAttack(player.getAttack2().getPower(), player.getAtk(), player.getDef(), player.getAttack1().getName(), computer.getName(), computer.getHealthPoints()));
+            }
         }
     }
 
@@ -77,6 +83,3 @@ public class Game {
         }
     }
 }
-
-
-/* 151 Pokemon, 217 Attacks */

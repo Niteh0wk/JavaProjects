@@ -20,6 +20,7 @@ public class UI {
                 }catch (IOException e){
                     e.getCause();
                 }
+
                 switch (chooser){
                     case "1":
                         System.out.print("Type in the id: ");
@@ -30,7 +31,6 @@ public class UI {
                         game.choosePokemonWithName(sc.next());
                         break;
                 }
-
                 game.startBattle(sc);
             }
         }while (!chooser.equals("X"));
