@@ -11,7 +11,7 @@ class BattleTest {
     }
 
     @org.junit.jupiter.api.Test
-    void playerAttack() {
+    void attack() {
     }
 
     @org.junit.jupiter.api.Test
