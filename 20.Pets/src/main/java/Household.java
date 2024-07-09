@@ -1,8 +1,6 @@
-import java.util.HashMap;
-
 public class Household {
-    private String name;
     private int id;
+    private String name;
 
     public String getName() {
         return name;
