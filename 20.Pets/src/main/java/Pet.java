@@ -27,7 +27,7 @@ public class Pet {
         this.personId = personId;
     }
 
-    public Pet(String name, int id, int person_id) {
+    public Pet(int id, String name, int person_id) {
         this.name = name;
         this.id = id;
         this.personId = person_id;

@@ -1,8 +1,8 @@
 import java.util.List;
 
-public interface Interface {
+public interface HouseholdManagementInterface {
     void createHousehold(Household household);
-    void createPerson(Person person);
+    void createPerson(Person person, int householdId);
     void createPet(Pet pet, int personId);
 
     Household readHousehold(int householdId);

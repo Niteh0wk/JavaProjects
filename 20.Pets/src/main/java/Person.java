@@ -27,7 +27,7 @@ public class Person {
         this.householdId = householdId;
     }
 
-    public Person(String name, int id, int household_id) {
+    public Person(int id, String name, int household_id) {
         this.name = name;
         this.id = id;
         this.householdId = household_id;
