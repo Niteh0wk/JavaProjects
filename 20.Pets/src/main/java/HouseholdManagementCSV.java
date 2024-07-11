@@ -25,6 +25,8 @@ public class HouseholdManagementCSV implements HouseholdManagementInterface {
         writeCSV(PETS_CSV, data);
     }
 
+    /*----*/
+
     public Household readHousehold(int householdId) {
         List<String[]> data = readCSV(HOUSEHOLDS_CSV);
         for (String[] row : data) {
@@ -54,6 +56,8 @@ public class HouseholdManagementCSV implements HouseholdManagementInterface {
         }
         return null;
     }
+
+    /*----*/
 
     public void updateHousehold(int householdId, Household values) {
         List<String[]> data = readCSV(HOUSEHOLDS_CSV);
@@ -90,6 +94,8 @@ public class HouseholdManagementCSV implements HouseholdManagementInterface {
         writeCSV(PETS_CSV, data);
     }
 
+    /*----*/
+
     public void deleteHousehold(int householdId) {
         List<String[]> data = readCSV(HOUSEHOLDS_CSV);
         data.removeIf(row -> Integer.parseInt(row[0]) == householdId);
@@ -108,6 +114,8 @@ public class HouseholdManagementCSV implements HouseholdManagementInterface {
         writeCSV(PETS_CSV, data);
     }
 
+    /*----*/
+
     public List<Household> getAllHouseholds() {
         List<String[]> data = readCSV(HOUSEHOLDS_CSV);
         List<Household> households = new ArrayList<>();
@@ -116,6 +124,8 @@ public class HouseholdManagementCSV implements HouseholdManagementInterface {
         }
         return households;
     }
+
+    /*----*/
 
     private List<String[]> readCSV(String filepath) {
         try {

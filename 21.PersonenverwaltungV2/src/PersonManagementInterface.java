@@ -1,4 +1,3 @@
-import java.sql.ClientInfoStatus;
 import java.util.List;
 
 public interface PersonManagementInterface {
