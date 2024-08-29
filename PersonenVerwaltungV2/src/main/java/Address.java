@@ -37,14 +37,6 @@ public class Address {
         this.houseNumber = houseNumber;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public Address(int plz, String city, String street, int houseNumber, int id) {
         this.plz = plz;
         this.city = city;
@@ -55,6 +47,6 @@ public class Address {
 
     @Override
     public String toString() {
-        return this.plz + ", " + this.city + ", " + this.street + ", " + this.houseNumber;
+        return this.plz + ", " + this.city + ", " + this.street + ", " + this.houseNumber + ", " + this.id;
     }
 }

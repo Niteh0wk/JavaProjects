@@ -32,7 +32,8 @@ public class PersonManagementCSV implements PersonManagementInterface {
         writeCSV(SIMPLEPERSONS_CSV, data);
     }
 
-    /*----*/
+----
+
 
     public Manager readManagement(int managerId) {
         List<String[]> data = readCSV(MANAGEMENTS_CSV);
@@ -74,7 +75,8 @@ public class PersonManagementCSV implements PersonManagementInterface {
         return null;
     }
 
-    /*----*/
+/*----*/
+
 
     public void deleteManagement(int managerId) {
         List<String[]> data = readCSV(MANAGEMENTS_CSV);
@@ -100,7 +102,8 @@ public class PersonManagementCSV implements PersonManagementInterface {
         writeCSV(SIMPLEPERSONS_CSV, data);
     }
 
-    /*----*/
+/*----*/
+
 
     public List<Manager> getAllManagements() {
         List<String[]> data = readCSV(MANAGEMENTS_CSV);
@@ -138,7 +141,8 @@ public class PersonManagementCSV implements PersonManagementInterface {
         return simplePersons;
     }
 
-    /*----*/
+/*----*/
+
 
     private List<String[]> readCSV(String filepath) {
         try {

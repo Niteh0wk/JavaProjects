@@ -1,6 +1,7 @@
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HouseholdManager implements ManagementInterface <Household>{
@@ -26,7 +27,7 @@ public class HouseholdManager implements ManagementInterface <Household>{
             try (ResultSet resultSet = readHouseholdStmt.executeQuery()){
                 if (resultSet.next()) {
                     String name = resultSet.getString("Name");
-                    System.out.println("Name: " + name);
+                    System.out.println("Household Name: " + name);
                 } else {
                     System.out.println("No entry found with ID: " + managerID);
                 }
@@ -39,8 +40,8 @@ public class HouseholdManager implements ManagementInterface <Household>{
     public void update(int householdID, String values) {
         String updateString = "update HOUSEHOLD set NAME = ? where ID = ?";
         try (PreparedStatement updateHousehold = DBConnector.getInstance().prepareStatement(updateString)) {
-            updateHousehold.setString(2, values);
-            updateHousehold.setInt(1, householdID);
+            updateHousehold.setString(1, values);
+            updateHousehold.setInt(2, householdID);
 
             updateHousehold.executeUpdate();
 
@@ -54,12 +55,37 @@ public class HouseholdManager implements ManagementInterface <Household>{
         String deleteString = "delete from HOUSEHOLD where id = ?";
         try (PreparedStatement deleteHousehold = DBConnector.getInstance().prepareStatement(deleteString)) {
             deleteHousehold.setInt(1, householdID);
-        } catch (Exception e) {
+
+            int rowsAffected = deleteHousehold.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Deleted " + rowsAffected + " row(s) from the database.");
+            } else {
+                System.out.println("No rows found with the specified ID.");
+            }
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public List<Household> getAllHouseholds() {
-        return null;
+        List<Household> households = new ArrayList<>();
+        String selectHouseholds = "Select ID, Name from Household";
+
+        try (PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(selectHouseholds);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+
+            while (resultSet.next()) {
+                int householdid = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+
+                Household household = new Household(householdid, name);
+                households.add(household);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return households;
     }
 }

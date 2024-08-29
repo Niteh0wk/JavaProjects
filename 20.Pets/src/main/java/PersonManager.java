@@ -26,7 +26,7 @@ public class PersonManager implements ManagementInterface <Person>{
             try (ResultSet resultSet = readPersonStmt.executeQuery()){
                 if (resultSet.next()) {
                     String name = resultSet.getString("Name");
-                    System.out.println("Name: " + name);
+                    System.out.println("Person Name: " + name);
                 } else {
                     System.out.println("No entry found with ID: " + personID);
                 }
@@ -39,8 +39,8 @@ public class PersonManager implements ManagementInterface <Person>{
     public void update(int personID, String values) {
         String updateString = "update PERSON set NAME = ? where ID = ?";
         try (PreparedStatement updatePerson = DBConnector.getInstance().prepareStatement(updateString)) {
-            updatePerson.setString(2, values);
-            updatePerson.setInt(1, personID);
+            updatePerson.setString(1, values);
+            updatePerson.setInt(2, personID);
 
             updatePerson.executeUpdate();
 
@@ -51,6 +51,19 @@ public class PersonManager implements ManagementInterface <Person>{
     }
 
     public void delete(int personID) {
+        String deleteString = "delete from PERSON where id = ?";
+        try (PreparedStatement deletePerson = DBConnector.getInstance().prepareStatement(deleteString)) {
+            deletePerson.setInt(1, personID);
 
+            int rowsAffected = deletePerson.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Deleted " + rowsAffected + " row(s) from the database.");
+            } else {
+                System.out.println("No rows found with the specified ID.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
