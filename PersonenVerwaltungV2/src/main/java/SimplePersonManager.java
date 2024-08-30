@@ -37,6 +37,8 @@ public class SimplePersonManager implements PersonInterface <SimplePerson>{
         }
     }
 
+    //TODO -> Find out how/what to update exactly in the database
+
     public void updatePerson(int personID, String values) {
 
     }

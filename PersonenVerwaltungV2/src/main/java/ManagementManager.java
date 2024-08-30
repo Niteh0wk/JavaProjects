@@ -4,11 +4,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ManagementManager implements ManagerInterface{
+public class ManagementManager implements ManagerInterface {
 
     public void createManagement(Manager manager) {
         String createManagementString = "insert into manager (id, name) values (?,?)";
-        try (PreparedStatement createManagementStmt = DBConnector.getInstance().prepareStatement(createManagementString)){
+        try (PreparedStatement createManagementStmt = DBConnector.getInstance().prepareStatement(createManagementString)) {
             createManagementStmt.setInt(1, manager.getId());
             createManagementStmt.setString(2, manager.getName());
 
