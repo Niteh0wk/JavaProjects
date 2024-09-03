@@ -37,11 +37,43 @@ public class SimplePersonManager implements PersonInterface <SimplePerson>{
         }
     }
 
-    //TODO -> Find out how/what to update exactly in the database
-
-    public void updatePerson(int personID, String values) {
-
+    public void updateFirstName(int personID, String values) {
+        String updateFirstNameString = "update simpleperson set first_name = ? where id = ?";
+        updateName(personID, values, updateFirstNameString);
     }
+
+    public void updateLastName(int personID, String values) {
+        String updateLastNameString = "update simpleperson set last_name = ? where id = ?";
+        updateName(personID, values, updateLastNameString);
+    }
+
+    private void updateName(int personID, String values, String name) {
+        String updateNameString = name;
+        try (PreparedStatement updateNameStmt = DBConnector.getInstance().prepareStatement(updateNameString)) {
+            updateNameStmt.setString(1, values);
+            updateNameStmt.setInt(2, personID);
+
+            updateNameStmt.executeUpdate();
+            System.out.println("Simple Person was Updated!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateManagerID(int personID, int values) {
+        String updateFirstNameString = "update simpleperson set managerid = ? where id = ?";
+        try (PreparedStatement updateFirstNameStmt = DBConnector.getInstance().prepareStatement(updateFirstNameString)) {
+            updateFirstNameStmt.setInt(1, values);
+            updateFirstNameStmt.setInt(2, personID);
+
+            updateFirstNameStmt.executeUpdate();
+            System.out.println("Simple Person was Updated!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     public void deletePerson(int personID) {
         String deleteString = "delete from simpleperson where id = ?";

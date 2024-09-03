@@ -30,7 +30,7 @@ public class FullPerson {
     }
 
     public void setBirthday(String birthday) throws DateTimeParseException {
-        if (birthday.matches("\\d{2}.\\d{2}.\\d{4}")){
+        if (birthday.matches("\\d{4}.\\d{2}.\\d{2}")){
             this.birthday = birthday;
         }else {
             throw new DateTimeParseException("Your date does not match the right date format.", birthday, 0);

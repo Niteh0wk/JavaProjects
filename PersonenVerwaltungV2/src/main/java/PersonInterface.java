@@ -6,8 +6,6 @@ public interface PersonInterface <T> {
 
     void read(int personID);
 
-    void updatePerson(int personID, String values);
-
     void deletePerson(int personID);
 
     List<T> getAllPersons();

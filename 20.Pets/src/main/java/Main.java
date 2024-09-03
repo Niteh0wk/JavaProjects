@@ -46,5 +46,7 @@ public class Main {
         /*System.out.println(householdManager.getAllHouseholds());*/
 
 
+
+
     }
 }

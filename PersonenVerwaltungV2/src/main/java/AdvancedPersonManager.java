@@ -1,12 +1,10 @@
-import com.mysql.cj.jdbc.result.UpdatableResultSet;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvancedPersonManager implements PersonInterface <AdvancedPerson>{
+public class AdvancedPersonManager implements PersonInterface<AdvancedPerson> {
 
     public void createPerson(AdvancedPerson advancedPerson, int managerID) {
         String createAdvancedString = "insert into advancedperson (first_name, last_name, birthday, gender, id, managerid) values (?,?,?,?,?,?)";
@@ -46,10 +44,40 @@ public class AdvancedPersonManager implements PersonInterface <AdvancedPerson>{
         }
     }
 
-    //TODO -> Find out how/what to update exactly in the database
+    public void updateFirstName(int personID, String values) {
+        String updateFirstNameString = "update advancedperson set first_name = ? where id = ?";
+        updateName(personID, values, updateFirstNameString);
+    }
 
-    public void updatePerson(int personID, String values) {
+    public void updateLastName(int personID, String values) {
+        String updateLastNameString = "update advancedperson set last_name = ? where id = ?";
+        updateName(personID, values, updateLastNameString);
+    }
 
+    private void updateName(int personID, String values, String name) {
+        String updateNameString = name;
+        try (PreparedStatement updateNameStmt = DBConnector.getInstance().prepareStatement(updateNameString)) {
+            updateNameStmt.setString(1, values);
+            updateNameStmt.setInt(2, personID);
+
+            updateNameStmt.executeUpdate();
+            System.out.println("Advanced Person was Updated!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateManagerID(int personID, int values) {
+        String updateFirstNameString = "update advancedperson set managerid = ? where id = ?";
+        try (PreparedStatement updateFirstNameStmt = DBConnector.getInstance().prepareStatement(updateFirstNameString)) {
+            updateFirstNameStmt.setInt(1, values);
+            updateFirstNameStmt.setInt(2, personID);
+
+            updateFirstNameStmt.executeUpdate();
+            System.out.println("Advanced Person was Updated!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void deletePerson(int personID) {
@@ -81,15 +109,13 @@ public class AdvancedPersonManager implements PersonInterface <AdvancedPerson>{
                 String birthday = resultSet.getString("birthday");
                 Gender gender = Gender.valueOf(resultSet.getString("gender"));
                 int id = resultSet.getInt("id");
-                int managerid = resultSet.getInt("managerid");
 
-                AdvancedPerson advancedPerson = new AdvancedPerson(id, first_name,last_name,birthday,gender);
+                AdvancedPerson advancedPerson = new AdvancedPerson(id, first_name, last_name, birthday, gender);
                 advancedPeople.add(advancedPerson);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return advancedPeople;
     }
 }

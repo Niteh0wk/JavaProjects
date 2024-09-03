@@ -68,6 +68,10 @@ public class HouseholdManager implements ManagementInterface <Household>{
         }
     }
 
+    //TODO -> when getting all houshold make it so it prints out all people with their pets that live in this household
+    // make 4 methods the first methods executes the other three to print out all households,people and pets
+    // use select statements and the different id's to make it happen
+
     public List<Household> getAllHouseholds() {
         List<Household> households = new ArrayList<>();
         String selectHouseholds = "Select ID, Name from Household";

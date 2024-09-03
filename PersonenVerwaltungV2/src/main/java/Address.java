@@ -37,6 +37,14 @@ public class Address {
         this.houseNumber = houseNumber;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Address(int plz, String city, String street, int houseNumber, int id) {
         this.plz = plz;
         this.city = city;
