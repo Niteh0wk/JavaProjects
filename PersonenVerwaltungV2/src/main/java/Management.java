@@ -1,4 +1,4 @@
-public class Manager {
+public class Management {
     private int id;
     private String name;
 
@@ -18,7 +18,7 @@ public class Manager {
         this.name = name;
     }
 
-    public Manager(int id, String name) {
+    public Management(int id, String name) {
         this.id = id;
         this.name = name;
     }

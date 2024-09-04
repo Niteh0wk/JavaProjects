@@ -1,8 +1,8 @@
 import java.util.List;
 
-public interface ManagerInterface{
+public interface ManagementInterface {
 
-    void createManagement(Manager manager);
+    void createManagement(Management manager);
 
     void readManager(int managerID);
 
@@ -10,5 +10,5 @@ public interface ManagerInterface{
 
     void deleteManager(int managerID);
 
-    List<Manager> getAllManagements();
+    List<Management> getAllManagements();
 }

@@ -42,7 +42,9 @@ public class Person {
         printValidator = PRINT_SIMPLE;
     }
 
-    /* Getter and Setter */
+    /*Getter and Setter */
+
+
 
     public String getFirstName() {
         return firstName;
@@ -89,6 +91,7 @@ public class Person {
     }
 
     /* toString Override for printing */
+
 
     @Override
     public String toString(){

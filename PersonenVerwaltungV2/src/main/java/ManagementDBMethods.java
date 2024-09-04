@@ -4,9 +4,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ManagementManager implements ManagerInterface {
+public class ManagementDBMethods implements ManagementInterface {
 
-    public void createManagement(Manager manager) {
+    public void createManagement(Management manager) {
         String createManagementString = "insert into manager (id, name) values (?,?)";
         try (PreparedStatement createManagementStmt = DBConnector.getInstance().prepareStatement(createManagementString)) {
             createManagementStmt.setInt(1, manager.getId());
@@ -68,8 +68,8 @@ public class ManagementManager implements ManagerInterface {
         }
     }
 
-    public List<Manager> getAllManagements() {
-        List<Manager> managers = new ArrayList<>();
+    public List<Management> getAllManagements() {
+        List<Management> managers = new ArrayList<>();
         String selectManager = "select id, name from manager";
         try (PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(selectManager)) {
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -78,7 +78,7 @@ public class ManagementManager implements ManagerInterface {
                 int managerid = resultSet.getInt("id");
                 String name = resultSet.getString("name");
 
-                Manager manager = new Manager(managerid, name);
+                Management manager = new Management(managerid, name);
                 managers.add(manager);
             }
         } catch (SQLException e) {

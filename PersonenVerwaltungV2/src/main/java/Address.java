@@ -5,6 +5,14 @@ public class Address {
     private int houseNumber;
     private int id;
 
+    public Address(int id, int plz, String city, String street, int houseNumber) {
+        setPlz(plz);
+        setCity(city);
+        setStreet(street);
+        setHouseNumber(houseNumber);
+        setId(id);
+    }
+
     public int getPlz() {
         return plz;
     }
@@ -45,16 +53,13 @@ public class Address {
         this.id = id;
     }
 
-    public Address(int plz, String city, String street, int houseNumber, int id) {
-        this.plz = plz;
-        this.city = city;
-        this.street = street;
-        this.houseNumber = houseNumber;
-        this.id = id;
-    }
-
     @Override
     public String toString() {
-        return this.plz + ", " + this.city + ", " + this.street + ", " + this.houseNumber + ", " + this.id;
+        return "Adresse{" +
+                "Postleitzahl='" + plz + '\'' +
+                ", Ort='" + city + '\'' +
+                ", StrassenName='" + street + '\'' +
+                ", HausNummer=" + houseNumber +
+                '}';
     }
 }
