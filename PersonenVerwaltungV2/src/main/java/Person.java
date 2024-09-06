@@ -48,10 +48,14 @@ public class Person {
     }
 
     public void setBirthday(String birthday) throws DateTimeParseException {
-        if (birthday.matches("\\d{4}.\\d{2}.\\d{2}")){
-            this.birthday = birthday;
-        }else {
-            throw new DateTimeParseException("Your date does not match the right date format.", birthday, 0);
+        if (birthday != null) {
+            if (birthday.matches("\\d{4}.\\d{2}.\\d{2}")){
+                this.birthday = birthday;
+            }else {
+                throw new DateTimeParseException("Your date does not match the right date format.", birthday, 0);
+            }
+        } else {
+            this.birthday = null;
         }
     }
 

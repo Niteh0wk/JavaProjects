@@ -64,11 +64,17 @@ public class PersonDBMethods implements PersonManagerInterface {
             if (rs.next()) {
                 String firstName = rs.getString("FIRST_NAME");
                 String lastName = rs.getString("LAST_NAME");
-                Gender gender = Gender.valueOf(rs.getString("GENDER"));
+                String genderString = rs.getString("GENDER");
+                Gender gender = null;
+                if (genderString != null) {
+                    gender = Gender.valueOf(rs.getString("GENDER"));
+                }
+
                 String birthday = rs.getString("BIRTHDAY");
                 int address_id = rs.getInt("ADDRESSID");
+                int id = rs.getInt("ID");
                 int manager_id = rs.getInt("MANAGERID");
-                person = new Person(firstName, lastName, birthday, gender, address_id, manager_id);
+                person = new Person(firstName, lastName, birthday, gender, address_id, id, manager_id);
             } else {
                 System.err.println("No Person found with the given ID");
                 return null;
@@ -84,9 +90,18 @@ public class PersonDBMethods implements PersonManagerInterface {
         try (PreparedStatement ps = DBConnector.getInstance().prepareStatement("UPDATE PERSON SET first_name = ?, LAST_NAME = ?, GENDER = ?, BIRTHDAY = ?, ADDRESSID = ? WHERE ID = ?")) {
             ps.setString(1, person.getFirstName());
             ps.setString(2, person.getLastName());
-            ps.setObject(3, person.getGender().toString());
+            if (person.getGender() != null) {
+                ps.setObject(3, person.getGender().toString());
+            } else {
+                ps.setNull(3, Types.VARCHAR);
+            }
             ps.setObject(4, person.getBirthday());
-            ps.setInt(5, person.getAddress_id());
+            if (person.getAddress_id() == 0) {
+                ps.setNull(5, Types.INTEGER);
+            } else {
+                ps.setInt(5, person.getAddress_id());
+            }
+
             ps.setInt(6, person.getId());
             ps.executeUpdate();
         } catch (SQLException e) {

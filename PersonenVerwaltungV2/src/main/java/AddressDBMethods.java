@@ -14,11 +14,11 @@ public class AddressDBMethods implements AddressInterface {
             ps.setInt(4, address.getPlz());
             ps.setInt(5, address.getId());
             ps.execute();
-
+            System.out.println("Address created successfully");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("Address created successfully");
+
     }
 
     public Address readAddress(int address_id) {
